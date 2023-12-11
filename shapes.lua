@@ -1,5 +1,7 @@
 -- Node (shape) definition and registration
 
+local S = minetest.get_translator("facade")
+
 local wehavechisels =  minetest.get_modpath("mychisel")
 
 --------------
@@ -9,7 +11,7 @@ local wehavechisels =  minetest.get_modpath("mychisel")
 --Node will be called facade:<subname>_bannerstone
 function facade.register_bannerstone(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_bannerstone" , {
-		description = desc .. " Bannerstone",
+		description = S("@1 Bannerstone", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -43,7 +45,7 @@ end
 --Node will be called facade:<subname>_bannerstone_corner
 function facade.register_bannerstone_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_bannerstone_corner", {
-		description = desc .. " Bannerstone Corner",
+		description = S("@1 Bannerstone Corner", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -81,7 +83,7 @@ end
 --Node will be called facade:<subname>_centerstone
 function facade.register_centerstone(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_centerstone", {
-		description = desc .. " Centerstone",
+		description = S("@1 Centerstone", desc),
 		drawtype = "nodebox",
 		tiles = {"" .. modname.. "_" .. subname .. ".png^facade_centerstone.png"},
 		paramtype = "light",
@@ -134,7 +136,7 @@ end
 --Node will be called facade:<subname>_column
 function facade.register_column(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_column" , {
-		description = desc .. " Column",
+		description = S("@1 Column", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -173,7 +175,7 @@ end
 --Node will be called facade:<subname>_column_corner
 function facade.register_column_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_column_corner", {
-		description = desc .. " Column Corner",
+		description = S("@1 Column Corner", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -218,7 +220,7 @@ end
 --Node will be called facade:<subname>_corbel
 function facade.register_corbel(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_corbel", {
-		description = desc .. " Corbel",
+		description = S("@1 Corbel", desc),
 		drawtype = "nodebox",
 		tiles = {"" .. modname.. "_" .. subname .. ".png"},
 		paramtype = "light",
@@ -246,7 +248,7 @@ end
 --Node will be called facade:<subname>_corbel_corner
 function facade.register_corbel_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_corbel_corner", {
-		description = desc .. " Corbel Corner",
+		description = S("@1 Corbel Corner", desc),
 		drawtype = "nodebox",
 		tiles = {"" .. modname.. "_" .. subname .. ".png"},
 		paramtype = "light",
@@ -274,7 +276,7 @@ end
 --Node will be called facade:<subname>_corbel_corner_inner
 function facade.register_corbel_corner_inner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_corbel_corner_inner", {
-		description = desc .. " Corbel Inner Corner",
+		description = S("@1 Corbel Inner Corner", desc),
 		drawtype = "nodebox",
 		tiles = {"" .. modname.. "_" .. subname .. ".png"},
 		paramtype = "light",
@@ -308,7 +310,7 @@ end
 --Node will be called facade:<subname>_carved_stone_a
 function facade.register_carved_stone_a(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_carved_stone_a", {
-		description = desc .. " Carved Stone A",
+		description = S("@1 Carved Stone A", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -350,7 +352,7 @@ end
 --Node will be called facade:<subname>_carved_stone_a_corner
 function facade.register_carved_stone_a_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_carved_stone_a_corner", {
-		description = desc .. " Carved Stone A Corner",
+		description = S("@1 Carved Stone A Corner", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -405,7 +407,7 @@ end
 --Node will be called facade:<subname>_rgspro
 function facade.register_rgspro(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_rgspro", {
-		description = desc .. " RGSpro",
+		description = S("@1 RGSpro", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -439,7 +441,7 @@ end
 --Node will be called facade:<subname>_rgspro_inner_corner
 function facade.register_rgspro_inner_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_rgspro_inner_corner", {
-		description = desc .. " RGSpro Inner Corner",
+		description = S("@1 RGSpro Inner Corner", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -477,7 +479,7 @@ end
 --Node will be called facade:<subname>_rgspro_outer_corner
 function facade.register_rgspro_outer_corner(modname, subname, recipeitem, desc)
 	minetest.register_node("facade:" .. subname .. "_rgspro_outer_corner", {
-		description = desc .. " RGSpro Outer Corner",
+		description = S("@1 RGSpro Outer Corner", desc),
 		drawtype = "nodebox",
 		tiles = {
 		"" .. modname.. "_" .. subname .. ".png",
@@ -521,7 +523,7 @@ function facade.register_corner_bricks(modname, subname, recipeitem, desc)
 	if not string.match(recipeitem,"clay")
 	then	-- do not do for clay things that is ugly
 		minetest.register_node("facade:" .. subname .. "_corner_bricks", {
-			description = desc .. " Corner Bricks",
+			description = S("@1 Corner Bricks", desc),
 			drawtype = "nodebox",
 			tiles = {
 			"" .. modname.. "_" .. subname .. "_brick.png"},
@@ -588,7 +590,7 @@ if not minetest.get_modpath("columnia") then
 	-- Node will be called facade:<subname>_columnia_mid
 	function facade.register_columnia_mid(modname, subname, recipeitem, desc)
 		minetest.register_node("facade:" .. subname .. "_columnia_mid", {
-			description = desc .. " Column Middle",
+			description = S("@1 Column Middle", desc),
 			drawtype = "nodebox",
 			tiles = {"" .. modname.. "_" .. subname .. ".png"},
 			paramtype = "light",
@@ -612,7 +614,7 @@ if not minetest.get_modpath("columnia") then
 	-- Node will be called facade:<subname>_columnia_bottom
 	function facade.register_columnia_bottom(modname, subname, recipeitem, desc)
 		minetest.register_node("facade:" .. subname .. "_columnia_bottom", {
-			description = desc .. " Column Bottom/Top",
+			description = S("@1 Column Bottom/Top", desc),
 			drawtype = "nodebox",
 			tiles = {"" .. modname.. "_" .. subname .. ".png"},
 			paramtype = "light",
@@ -669,7 +671,7 @@ if not minetest.get_modpath("columnia") then
 	-- Node will be called facade:<subname>_columnia_crosslink
 	function facade.register_columnia_crosslink(modname, subname, recipeitem, desc)
 		minetest.register_node("facade:" .. subname .. "_columnia_crosslink", {
-			description = desc .. " Column Crosslink",
+			description = S("@1 Column Crosslink", desc),
 			drawtype = "nodebox",
 			tiles = {"" .. modname.. "_" .. subname .. ".png"},
 			paramtype = "light",
@@ -693,7 +695,7 @@ if not minetest.get_modpath("columnia") then
 	-- Node will be called facade:<subname>_columnia_link
 	function facade.register_columnia_link(modname, subname, recipeitem, desc)
 		minetest.register_node("facade:" .. subname .. "_columnia_link", {
-			description = desc .. " Column Link",
+			description = S("@1 Column Link", desc),
 			drawtype = "nodebox",
 			tiles = {"" .. modname.. "_" .. subname .. ".png"},
 			paramtype = "light",
@@ -714,7 +716,7 @@ if not minetest.get_modpath("columnia") then
 	-- Node will be called facade:<subname>_columnia_linkdown
 	function facade.register_columnia_linkdown(modname, subname, recipeitem, desc)
 		minetest.register_node("facade:" .. subname .. "_columnia_linkdown", {
-			description = desc .. " Column Linkdown",
+			description = S("@1 Column Linkdown", desc),
 			drawtype = "nodebox",
 			tiles = {"" .. modname.. "_" .. subname .. ".png"},
 			paramtype = "light",

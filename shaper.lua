@@ -3,6 +3,7 @@
 -- maching from mymillwork. Namely, it provides a tool for creating shaped blocks that does
 -- not rely on using recipes.
 
+local S = minetest.get_translator("facade")
 
 -- Balancing output per 1 input block with respect to apparent volume of output shape.
 -- All current shapes are added, but shapes not present in this table will still be produced
@@ -47,7 +48,7 @@ local function prepare_formspec (material_name)
 	local shaper_formspec =
 
 	"size[8,11;]"..
-	"label[0,0;" .. "Choose shape to produce:" .. "]"..
+	"label[0,0;" .. S("Choose shape to produce:") .. "]"..
 
 	-- row 1, blocky shapes
 	"item_image_button[0,0.5;1,1;" .. output .. "_bannerstone" .. ";bannerstone; ]"..
@@ -97,9 +98,9 @@ local function prepare_formspec (material_name)
 
 	shaper_formspec = shaper_formspec ..
 
-	"label[0, 5.5;".."In:".."]"..
+	"label[0, 5.5;"..S("In:").."]"..
 	"list[current_name;src;1,5.5;1,1;]"..
-	"label[3, 5.5;".."Out:".."]"..
+	"label[3, 5.5;"..S("Out:").."]"..
 	"list[current_name;dst;4,5.5;4,1;]"..
 
 	"list[current_player;main;0,7;8,4;]"..
@@ -293,7 +294,7 @@ end
 
 
 minetest.register_node("facade:shaper", {
-	description = "Shaper Machine",
+	description = S("Shaper Machine"),
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",
@@ -344,9 +345,9 @@ minetest.register_node("facade:shaper", {
 		local owner = placer and placer:get_player_name() or ""
 		meta:set_string("owner", owner)
 		if owner then
-			meta:set_string("infotext", ("Facade Shaper (owned by %s)"):format(owner))
+			meta:set_string("infotext", S("Facade Shaper (owned by @1)", owner))
 		else
-			meta:set_string("infotext", "Facade Shaper")
+			meta:set_string("infotext", S("Facade Shaper"))
 		end
 	end,
 	can_dig = check_removability,
